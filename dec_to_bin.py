@@ -6,10 +6,14 @@ def decimal_to_binary(number):
         number = number // 2
         result = str(remainder) + result  #place string in reverse order
     return result
+def getInput():
+    num = input("Enter a decimal number")
+    while not num.isnumeric():
+        print("Not a decimal number")
+        num = input("enter again")
 
-def main():
-    num = input("Enter Decimal Number")
     print("Decimal {} to Binary: {}" .format(num, decimal_to_binary(num)))
+        
 
 if __name__ == '__main__':
-    main()
+    getInput()
